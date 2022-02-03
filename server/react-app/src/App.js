@@ -22,15 +22,21 @@ function AppMenu() {
 function AppSearch() {
   return (
     <div class="SearchQueryContainer">
-      <button type="submit" class="submit-btn">
-        <i class="fa fa-search fa-2x"></i>
+      <div class="input-icons">
+        <i class="fa fa-search icon"></i>
+        <input class="input-field" type="text" placeholder="username"></input>
+      </div>
+      <button class="submit-btn" type="submit">
+        search
       </button>
-      <input
-        type="text"
-        class="submit-text"
-        placeholder="  username"
-        name="search"
-      ></input>
+    </div>
+  );
+}
+
+function AppSearchResults() {
+  return (
+    <div class="search-results">
+      <h1>Search Results</h1>
     </div>
   );
 }
@@ -40,6 +46,7 @@ function App() {
     <div>
       <AppMenu />
       <AppSearch />
+      <AppSearchResults />
     </div>
   );
 }
