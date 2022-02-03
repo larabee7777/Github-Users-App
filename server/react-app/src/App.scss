@@ -2,8 +2,10 @@
   text-align: center;
 }
 
-$primary-color: rgb(64, 5, 104);
-$secondary-color: rgb(165, 162, 167);
+$primary-color: rgba(122, 30, 198, 255);
+$secondary-color: rgba(223, 230, 237, 255);
+$menu-active: rgba(114, 103, 244, 255);
+$btn-color: rgba(44, 136, 217, 255);
 
 .App-logo {
   height: 40vmin;
@@ -54,16 +56,17 @@ $secondary-color: rgb(165, 162, 167);
   overflow: hidden;
   display: flex;
   align-items: center;
+  border-bottom: 2px solid rgba(158, 173, 186, 255);
 }
 
 .topnav a {
   display: inline;
   float: centre;
-  color: $secondary-color;
+  color: rgb(0, 0, 0);
   text-align: center;
   padding: 14px 36px;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 22px;
 }
 
 .topnav a:hover {
@@ -72,7 +75,7 @@ $secondary-color: rgb(165, 162, 167);
 }
 
 .topnav a.active {
-  color: rgb(51, 0, 85);
+  color: $menu-active;
 }
 
 .AppSearch {
@@ -115,7 +118,7 @@ h1 {
   -moz-appearance: none;
   appearance: none;
   min-width: 100px;
-  background-color: $primary-color;
+  background-color: $btn-color;
   color: rgb(255, 255, 255);
   border-radius: 4px;
   font-size: 16px;
