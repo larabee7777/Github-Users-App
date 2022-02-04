@@ -1,5 +1,34 @@
+import React from "react";
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  NavLink,
+} from "react-router-dom";
 import logo from "./logo.svg";
 import "./App.css";
+import "./scripts";
+
+import { Search } from "./components/search";
+import { SavedUsers } from "./components/savedusers";
+
+// function AppMenu() {
+//   return (
+//     <div>
+//       <div class="topnav">
+//         <div class="logo">
+//           <h3>Github Users</h3>
+//         </div>
+//         <div>
+//           <a class="active" href="#home">
+//             Search Users
+//           </a>
+//           <a href="#news">Saved Users</a>
+//         </div>
+//       </div>
+//     </div>
+//   );
+// }
 
 function AppMenu() {
   return (
@@ -9,45 +38,28 @@ function AppMenu() {
           <h3>Github Users</h3>
         </div>
         <div>
-          <a class="active" href="#home">
-            Search Users
-          </a>
-          <a href="#news">Saved Users</a>
+          <NavLink to="/search" activeStyle>
+            Search
+          </NavLink>
+          <NavLink to="/savedusers" activeStyle>
+            Saved Users
+          </NavLink>
         </div>
       </div>
     </div>
   );
 }
 
-function AppSearch() {
-  return (
-    <div class="SearchQueryContainer">
-      <div class="input-icons">
-        <i class="fa fa-search icon"></i>
-        <input class="input-field" type="text" placeholder="username"></input>
-      </div>
-      <button class="submit-btn" type="submit">
-        search
-      </button>
-    </div>
-  );
-}
-
-function AppSearchResults() {
-  return (
-    <div class="search-results">
-      <h1>Search Results</h1>
-    </div>
-  );
-}
-
 function App() {
   return (
-    <div>
+    <Router>
       <AppMenu />
-      <AppSearch />
-      <AppSearchResults />
-    </div>
+      <Routes>
+        <Route exact path="/" exact element={<Search />} />
+        <Route exact path="/search" exact element={<Search />} />
+        <Route path="/savedusers" element={<SavedUsers />} />
+      </Routes>
+    </Router>
   );
 }
 
