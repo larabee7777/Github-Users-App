@@ -1,6 +1,7 @@
 import "./App.css";
 import React, { useState } from "react";
 import { DisplaySearchResult } from "./components/searchresults";
+import { FetchUsers } from "./components/fetchusers";
 
 function DisplayUsers() {
   return (

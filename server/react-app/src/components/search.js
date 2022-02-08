@@ -4,6 +4,7 @@ import {
   DisplayUsers,
 } from "../scripts";
 import { testInputDisplay } from "./searchresults";
+import "../App.css";
 import React from "react";
 
 function AppSearch() {

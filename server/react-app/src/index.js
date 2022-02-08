@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import ReactDOM from "react-dom";
 import { QueryClientProvider, QueryClient } from "react-query";
 import { ReactQueryDevtools } from "react-query/devtools";
 import "./index.css";
 import App from "./App";
+import "./App.css";
 import reportWebVitals from "./reportWebVitals";
 
 const queryClient = new QueryClient();

@@ -2,6 +2,7 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
 .App {
   text-align: center;
+  overflow: hidden;
 }
 
 .App-logo {
@@ -125,6 +126,38 @@ h1 {
 
 .submit-btn:hover {
   background-color: #dfe6ed;
+}
+
+.results-container {
+  display: flex;
+  column-gap: 5px;
+  row-gap: 30px;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.view-profile-btn {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  min-width: 100px;
+  background-color: #2c88d9;
+  color: white;
+  border-radius: 4px;
+  font-size: 12px;
+  border: none;
+  outline: none;
+  margin-top: 2%;
+  padding: 10px 16px;
+}
+
+.view-profile-btn:hover {
+  background-color: #dfe6ed;
+}
+
+.user-cards {
+  flex: 40%;
+  flex: 1 1 30%;
 }
 
 /*# sourceMappingURL=App.css.map */

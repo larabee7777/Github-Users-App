@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
+import "../App.css";
 
 export class FetchUsers extends React.Component {
   constructor(props) {
@@ -32,11 +33,23 @@ export class FetchUsers extends React.Component {
     return (
       <div className="App">
         <h1> All Users</h1>{" "}
-        {items.map((item) => (
-          <ol key={item.id}>
-            Login: {item.login}, Profile: {item.url},<button>ADD USER</button>
-          </ol>
-        ))}
+        <div class="results-container">
+          {items.map((item) => (
+            <div class="user-cards">
+              <input
+                type="image"
+                alt="user icon"
+                id="userIcon"
+                src={process.env.PUBLIC_URL + "images/user_icon_default.png"}
+                width="50%"
+              ></input>
+
+              <div>Username: {item.login}</div>
+              <div>Profile: {item.url}</div>
+              <button class="view-profile-btn">VIEW PROFILE</button>
+            </div>
+          ))}
+        </div>
       </div>
     );
   }
