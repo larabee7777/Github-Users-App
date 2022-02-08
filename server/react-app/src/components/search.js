@@ -1,27 +1,36 @@
-import DisplayUsers from "../scripts";
+import {
+  DisplaySearchResult,
+  DisplaySearchResults,
+  DisplayUsers,
+} from "../scripts";
+import { testInputDisplay } from "./searchresults";
 import React from "react";
-import ReactDOM from "react-dom";
-import axios from "axios";
-import { ReactQueryDevtools, useQuery } from "react-query";
 
 function AppSearch() {
   return (
-    <div class="SearchQueryContainer">
-      <div class="input-icons">
-        <i class="fa fa-search icon"></i>
-        <input class="input-field" type="text" placeholder="username"></input>
+    <form>
+      <div class="SearchQueryContainer">
+        <div class="input-icons">
+          <i class="fa fa-search icon"></i>
+          <input
+            class="input-field"
+            id="searchTermInput"
+            type="text"
+            placeholder="username"
+          ></input>
+        </div>
+        <button class="submit-btn" type="submit" onClick={testInputDisplay}>
+          search
+        </button>
       </div>
-      <button class="submit-btn" type="submit">
-        search
-      </button>
-    </div>
+    </form>
   );
 }
 
 function AppSearchResults() {
   return (
     <div class="search-results">
-      <DisplayUsers />
+      <DisplaySearchResults />
     </div>
   );
 }

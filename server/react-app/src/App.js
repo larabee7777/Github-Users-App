@@ -5,12 +5,14 @@ import {
   Routes,
   NavLink,
 } from "react-router-dom";
-import logo from "./logo.svg";
+//import logo from "./logo.svg";
 import "./App.css";
 import "./scripts";
 
 import { Search } from "./components/search";
 import { SavedUsers } from "./components/savedusers";
+import { DisplaySearchResults } from "./scripts";
+import { FetchUsers } from "./components/fetchusers";
 
 // function AppMenu() {
 //   return (
@@ -44,6 +46,9 @@ function AppMenu() {
           <NavLink to="/savedusers" activeStyle>
             Saved Users
           </NavLink>
+          <NavLink to="/fetchusers" activeStyle>
+            Fetch Users
+          </NavLink>
         </div>
       </div>
     </div>
@@ -58,6 +63,7 @@ function App() {
         <Route exact path="/" exact element={<Search />} />
         <Route exact path="/search" exact element={<Search />} />
         <Route path="/savedusers" element={<SavedUsers />} />
+        <Route path="/fetchusers" element={<FetchUsers />} />
       </Routes>
     </Router>
   );
