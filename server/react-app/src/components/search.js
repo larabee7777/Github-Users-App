@@ -9,22 +9,20 @@ import React from "react";
 
 function AppSearch() {
   return (
-    <form>
-      <div class="SearchQueryContainer">
-        <div class="input-icons">
-          <i class="fa fa-search icon"></i>
-          <input
-            class="input-field"
-            id="searchTermInput"
-            type="text"
-            placeholder="username"
-          ></input>
-        </div>
-        <button class="submit-btn" type="submit" onClick={testInputDisplay}>
-          search
-        </button>
+    <div class="SearchQueryContainer">
+      <div class="input-icons">
+        <i class="fa fa-search icon"></i>
+        <input
+          class="input-field"
+          id="searchTermInput"
+          type="text"
+          placeholder="username"
+        ></input>
       </div>
-    </form>
+      <button class="submit-btn" type="submit" onClick={testInputDisplay}>
+        search
+      </button>
+    </div>
   );
 }
 

@@ -3,6 +3,8 @@ import React, { useState } from "react";
 import { DisplaySearchResult } from "./components/searchresults";
 import { FetchUsers } from "./components/fetchusers";
 
+var SavedUsersArray = [];
+
 function DisplayUsers() {
   return (
     <div>

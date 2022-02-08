@@ -38,15 +38,17 @@ export class FetchUsers extends React.Component {
             <div class="user-cards">
               <input
                 type="image"
+                class="user-icon"
+                id={item.id}
                 alt="user icon"
-                id="userIcon"
                 src={process.env.PUBLIC_URL + "images/user_icon_default.png"}
                 width="50%"
               ></input>
 
               <div>Username: {item.login}</div>
-              <div>Profile: {item.url}</div>
-              <button class="view-profile-btn">VIEW PROFILE</button>
+              <a class="view-profile-btn" href={item.url}>
+                VIEW PROFILE
+              </a>
             </div>
           ))}
         </div>
